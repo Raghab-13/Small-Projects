@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100w;
+    background-color: grey;
+}
+
+
+h2{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: rgb(236, 227, 227);
+ }
+
+.container{
+    border: 1px solid black;
+    height: 23rem;
+    width: 20rem;
+    border-radius: 10px;
+    padding: 1rem;
+    background: linear-gradient(45deg,rgb(205, 165, 112),rgb(135, 186, 224));
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.7rem;
+}
+ button{
+    font-size: 18px;
+    height: 2.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+ }
+ button:nth-child(1){
+    background-color: rgb(24, 24, 206);
+    color: white;
+ }
+ button:nth-child(2){
+   background: linear-gradient(90deg,rgb(7, 8, 8),rgb(168, 166, 166),rgb(7,8,6));
+    color: white;
+ }
+
+ input{
+    height: 2.5rem;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    padding-left: 1rem;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(240, 223, 223);
+ }
+
+ input[type=checkbox]{
+    height: 19px;
+    width: 15px;
+    margin-right: 0.9rem;
+    margin-left:.3rem ;
+ }
+
+ .remember{
+    display: flex;
+    margin: .5rem ;
+ }
+
+ #login{
+    background: linear-gradient(30deg,rgb(54, 49, 43),rgb(243, 216, 163));
+    border: 1.3px solid black;
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
+ }
+
+ .not-member{
+    display: flex;
+    margin:.5rem;
+    gap:2rem
+ }
+ 

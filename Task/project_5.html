@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="/Task/heading.css">
+    <link rel="stylesheet" href="/Task/project_5.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo-container" style="margin-right: 1%;">
+                <a href="#"><img class="logo" alt="LoGo" src="/Task/download.jpeg"></a>
+            </div>
+            <nav class="nav-bar">
+                <a href="requestBlood.jsp">Blood Request</a>
+                <a href="addDonor.jsp">Add Donor</a>
+                <a href="donorDetails.jsp">Donor Details</a>
+                <a href="manageStock.jsp">Manage Stock</a>
+                <a href="bloodSearch.jsp">Blood Search</a>
+                <a href="requestList.jsp">Request List</a>
+                <a href="SuccessRequest.jsp">Successful Request</a>
+            </nav>
+            <div class="home-btn-container"><a href="index.jsp" class="logout-btn">Logout</a></div>
+        </header>
+    </div>
+    
+    <div class="container">
+        <form>
+            <div class="taskform">
+
+                <div class="selectBlood">
+                    <h3>Blood Group</h3>
+                    <select name="bloodgroup">
+                        <option>Select</option>
+                        <option>A+</option>
+                        <option >A-</option>
+                        <option >B+</option>
+                        <option >B-</option>
+                        <option >AB+</option>
+                        <option >AB-</option>
+                        <option >O+</option>
+                        <option >O-</option>
+                    </select>    
+                </div>
+    
+                <div class="incdec">
+                    <h3>Increase/Decrease</h3>
+                    <select name="incdec">
+                        <option>Choose</option>
+                        <option>Increase</option>
+                        <option>Decrease</option>
+                    </select>
+                </div>
+    
+                <div class="units">
+                    <h3>Units</h3>
+                    <input type="text" placeholder="Enter Units">
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="SUBMIT">
+                </div>
+                
+            </div>
+            <div class="showblood">
+                <table id="customers">
+                    <tr>
+                        <th>Blood Group</th>
+                        <th>Units</th>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                    <tr id="lastchild">
+                        <td>A+</td>
+                        <td>45</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>

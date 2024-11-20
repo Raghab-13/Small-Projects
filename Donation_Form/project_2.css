@@ -1,0 +1,107 @@
+*{
+   
+    margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    background-color: rgb(230, 186, 206);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form{
+    border: 1px solid black;
+    /* position: absolute;
+    top:10px;
+    left: 30%; */
+    width: 450px;
+}
+
+h4{
+    margin-bottom:6px;
+    margin-top:15px;
+    font-weight:500;
+}
+.container{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.first{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.naming{
+    padding:7px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 20px;
+    width: 100%;
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.4);
+    
+}
+.second{
+    display: flex;
+    justify-content: space-between;
+}
+
+.second input[type="text"],select[name="gender"]{
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    width: 125px; 
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.4);
+}
+
+input[type="date"]{
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    width: 125px;
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.4);
+}
+
+.address{
+    width: 100%;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.4);
+}
+
+.blood{
+    width: 49%;
+   
+}
+select[name="blood-grp"]{
+    padding: 6px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.4);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(83, 179, 83);
+    color: white;
+    
+}

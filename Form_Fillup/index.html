@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form onsubmit="saveData()">
+        <fieldset>
+            <legend>Malaya Sashtri Details</legend>
+            <p><label>First name :<input type="text" id="firstName" placeholder="First Name" required></label></p>
+            <p><label>Last name :<input type="text" id="lastName" placeholder="Last Name" required></label></p>
+            <p>
+                <label><input type="radio" name="gender" value="Male" required>Male</label>
+                <label><input type="radio" name="gender" value="Female" required>Female</label>
+            </p>
+            <p><label>Email :<input type="email" id="email" placeholder="mail" required></label></p>
+            <p><label>Number :<input type="number" id="number" placeholder="mobile number" required></label></p>
+            <p>
+                <div align="center">
+                    <input type="submit" value="SUBMIT">
+                </div>
+            </p>
+        </fieldset>
+    </form>
+
+    <script>
+        function saveData() {
+            
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+
+            var userData = {
+                firstName: firstName,
+                lastName: lastName,
+                gender: gender,
+                email: email,
+                number: number
+            };
+
+            localStorage.setItem("userData", JSON.stringify(userData));
+            window.open("Malaya.html");
+        }
+    </script>
+</body>
+</html>
