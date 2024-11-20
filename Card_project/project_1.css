@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    font-family: serif;
+}
+
+p{
+    font-style: italic;
+}
+body{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+ .container{
+    background-color:navy;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 22rem;
+    width:20rem;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    height:100px;
+    position: absolute;
+    top: 30px;
+    border-radius: 50%;
+    border:2px solid navy;
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width: 100%;
+    background-color: white;
+}
+
+.contents{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7em;
+    padding-top: 30px;
+}
+
+.icons{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size:22px;
+    height:3rem;
+    width: 100%;
+}
+
+.buttons{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+button{
+    padding: 10px;
+    background-color:dodgerblue;
+    color: white;
+    border-radius: 17px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 2px black;
+}
+
+button:active{
+    height: 2rem;
+}
+
+.counts{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size: 17px;
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
