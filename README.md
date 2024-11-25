@@ -1,1 +1,1 @@
-Project by HTML,CSS,JS.
+Project in HTML,CSS,JS.
