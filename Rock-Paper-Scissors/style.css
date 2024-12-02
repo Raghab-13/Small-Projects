@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+    background:linear-gradient(90deg,rgb(54, 73, 124),rgb(38, 35, 74));
+}
+h2{
+    background-color: white;
+    margin-bottom: 3rem;
+}
+h3{
+    color: whitesmoke;
+    margin-top: 1rem;
+}
+
+.result-page{
+    margin-top: 3rem;
+}
+
+.choice-btn{
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    border: none;
+    margin: 10px;
+    background: #80779a;
+    cursor:pointer;
+}
+
+.choice-img{
+    padding: 2px 0 0 1px;
+    height: 80px;
+}
+
+.choice-btn:active{
+    background: #493f67;
+    opacity: 0.9;
+}
+
+.reset-btn{
+    width: 5rem;
+    height: 2rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+}

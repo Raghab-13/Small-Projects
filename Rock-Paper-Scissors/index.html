@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock-Papaer-Scissors Game</title>
+</head>
+<body>
+    <h2>ROCK-PAPER-SCISSOR</h2>
+
+    <button class="choice-btn" onclick="
+        let computerChoice= generateComputerChoice();
+        let resultMsg =getResult('Rock',computerChoice);
+        showResult('Rock',computerChoice,resultMsg);
+    "><img src="image/rock.png" alt="rock-img" class="choice-img"></button>
+
+
+    <button class="choice-btn" onclick="
+        computerChoice= generateComputerChoice();
+        resultMsg=getResult('Paper',computerChoice);
+        showResult('Paper',computerChoice,resultMsg);
+    "><img src="image/paper.png" alt="paper-img" class="choice-img"></button>
+
+
+    <button class="choice-btn" onclick="
+        computerChoice= generateComputerChoice();
+        resultMsg=getResult('Scissor',computerChoice);
+        showResult('Scissor',computerChoice,resultMsg);
+    "><img src="image/cissor.png" alt="cissor-img" class="choice-img"></button>
+
+    <div class="result-page">
+        <h3 id="user-move"></h3>
+        <h3 id="computer-move"></h3>
+        <h3 id="result"></h3>
+        <h3 id="score"></h3>
+    </div>
+   
+    <button class="reset-btn" onclick="
+        localStorage.clear()
+        resetScore();
+    ">Reset</button>
+
+<script>
+    let scoreStr=localStorage.getItem('Score');
+    let score;
+
+    resetScore(scoreStr);
+
+    function resetScore(scoreStr){
+        score = scoreStr ? JSON.parse(scoreStr) : {
+            win:0,
+            lost:0,
+            tie:0,
+        };
+
+        score.displayScore = function(){
+            return `win=${score.win} , lost=${score.lost} , tie=${score.tie}`;
+        };
+
+        showResult();
+    }
+
+    // if(scoreStr !== undefined){
+    //     score=JSON.parse(scoreStr);
+    // }else{
+    //     score = { 
+    //         win:0,
+    //         lost:0,
+    //         tie:0,
+    //     };
+    // }
+
+    function generateComputerChoice(){
+        let randomNumber=Math.random()*3;
+        if(randomNumber >0 && randomNumber <=1){
+            return 'Rock';
+        }else if(randomNumber >1 && randomNumber <=2){
+            return 'Paper';
+        }else{
+            return 'Scissor';
+        }
+    }
+
+    function getResult(userMove,computerMove){
+        if(userMove==='Rock'){
+            if(computerMove==='Rock'){
+                score.tie++;
+                return 'Match is tie';
+            }else if(computerMove==='Paper'){
+                score.lost++;
+                return 'Computer Won';
+            }else{
+                score.win++;
+                return 'You Won';
+            }
+        }else if(userMove==='Paper'){
+            if(computerMove==='Rock'){
+                score.win++;
+                return 'you Won';
+            }else if(computerMove==='Paper'){
+                score.tie++;
+                return 'Match Tie';
+            }else{
+                score.lost++;
+                return 'Computer Won';
+            }
+        }else{
+            if(computerMove==='Rock'){
+                score.lost++
+                return 'Computer won';
+            }else if(computerMove==='Paper'){
+                score.win++;
+                return 'You Won';
+            }else{
+                score.tie++;
+                return 'Match Tie';
+            }
+        }
+    }
+
+    function showResult(userMove,computerMove,result){  
+
+        localStorage.setItem('Score',JSON.stringify(score));
+
+        document.querySelector('#user-move').innerText=
+            userMove ? `You have choosen ${userMove}` : '';
+
+        document.querySelector('#computer-move').innerText=
+            computerMove ? `Computer choice is ${computerMove}` : '';
+
+        document.querySelector('#result').innerText= result || '';
+        
+        document.querySelector('#score').innerText= score.displayScore();
+        
+    }
+</script>
+</body>
+</html>
